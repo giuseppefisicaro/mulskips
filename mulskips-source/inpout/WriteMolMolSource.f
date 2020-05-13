@@ -53,7 +53,7 @@
       OPEN(FN+1,FILE=XYZFileName(:LEN_TRIM(XYZFileName)))
       OPEN(FN+2,FILE='movie.mos')
       OPEN(FN+3,FILE='DefAtEnergy.dat')
-      CALL WriteMolMolXYZFile(FN+1)
+      CALL WriteMolMolXYZFile(FN+1,Time,Iter)
       write(OPF10,*)time
 
       WRITE(FN,*) 'load xyz ', XYZFileName

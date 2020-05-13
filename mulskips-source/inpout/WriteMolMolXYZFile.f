@@ -19,7 +19,7 @@
 !!   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 !!   GNU General Public License for more details
 ***********************************************************************
-      SUBROUTINE WriteMolMolXYZFile(FN)
+      SUBROUTINE WriteMolMolXYZFile(FN,Time,Iter)
 
       USE  DefSystem
       USE  Definitions
@@ -29,6 +29,8 @@
       INTEGER NumAtTotal,NoEpiBulk,NoEpiSurf,NvoidMerged,NumAtWrong
       INTEGER NumIsWrong,ind_atotype
       INTEGER FN,NumSurfAt,Site(3),i,ic,sitec(3),NextN(3,4)
+      REAL(8)     Time
+      INTEGER     Iter
       REAL(8) rad,sf,a1(3),a2(3),a3(3),cr(3)
       LOGICAL noepi
       REAL(8), dimension(3) :: alat
@@ -171,7 +173,8 @@
 !      WRITE(FN+3,*) ''
 
       write(*,*)NoEpiBulk
-      WRITE(FN+3,'(1x,i8,1x,a)') NoEpiBulk,'angstroem'  !+Lenx*Leny*Lenz+(Lenx*Leny*Lenz*8)/9
+      WRITE(FN+3,'(1x,i8,1x,a,1x,a,1x,e15.8,1x,a,1x,i8)') NoEpiBulk,
+     > 'angstroem','KMC-time:',Time,'Iter:',Iter
       WRITE(FN+3,'(1x,a,3(1x,e15.8))')'periodic',alat(1),alat(2),alat(3)
 
       DO z=0,LenZ-1
@@ -210,7 +213,9 @@
 !      WRITE(FN,*) ''
 
       NvoidMerged=NumVoids
-      WRITE(FN,'(1x,i8,1x,a)') NumAtTotal+NvoidMerged,'angstroem'  !+Lenx*Leny*Lenz+(Lenx*Leny*Lenz*8)/9
+!      WRITE(FN,'(1x,i8,1x,a)') NumAtTotal+NvoidMerged,'angstroem'  !+Lenx*Leny*Lenz+(Lenx*Leny*Lenz*8)/9
+      WRITE(FN,'(1x,i8,1x,a,1x,a,1x,e15.8,1x,a,1x,i8)') 
+     > NumAtTotal+NvoidMerged,'angstroem','KMC-time:',Time,'Iter:',Iter
       WRITE(FN,'(1x,a,3(1x,e15.8))')'periodic',alat(1),alat(2),alat(3)
 
       DO z=0,LenZ-1
