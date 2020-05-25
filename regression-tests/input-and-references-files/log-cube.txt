@@ -1,0 +1,17 @@
+ IDUM    -9117116
+ numParticelle=      500000 Levels =          20 , SizeTree =     1048575
+ ATTENTION!!! You are running mulskips in test modality that is random numbers are not so random!!
+         420         541
+         180         301
+        6859           0        2398
+ I00000000
+ NumAtWrong:            0
+           0
+ I00000001
+ NumAtWrong:          916
+           0
+ Iter    10000000   2876829.4401611313              123         249         537
+ NatNvoidNad       37009           9        9276
+ I00000001
+ NumAtWrong:          916
+           0

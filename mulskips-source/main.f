@@ -54,6 +54,7 @@
 
       LattCoo=0
       LattInd=0
+      counter=0
       IDUM = -9117116
       WRITE(*,*)'IDUM',IDUM
       CALL Fileopen()
@@ -67,6 +68,13 @@
       READ(IPF,*)OutMolMol
       READ(IPF,*)MaxIter
       READ(IPF,*)exit_zeta
+      READ(IPF,*)RunType
+
+      IF(RunType.EQ.'T') THEN
+       write(*,*)'ATTENTION!!! You are running mulskips in test modality,
+     > that is random numbers are not so random!!'
+      END IF
+      
      
       IF(InitSt.EQ.'F')THEN
          Len1=Len1-MOD(Len1,24)
@@ -104,7 +112,7 @@
          write(*,*)"few MC particles: stop MC",Iter,NumAdAtom
          EXIT
        END IF
-       CALL PickTreeEvent(Ind,Patom)
+       CALL PickTreeEvent(Ind,Patom,RunType)
        Time=Time+1.0/Tree(1)
        Itrans=ListAdAtom(Ind) % Ind_Event
        IF(MOD(Iter,OutMolMol).EQ.0)THEN
