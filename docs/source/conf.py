@@ -18,7 +18,7 @@
 # -- Project information -----------------------------------------------------
 
 project = 'mulskips'
-copyright = '2020, Giuseppe Fisicaro'
+copyright = '2020, MulSKIPS  developers'
 author = 'Giuseppe Fisicaro'
 
 # The full version, including alpha/beta/rc tags
