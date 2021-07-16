@@ -1,7 +1,7 @@
 How to use git
 ==============
 
-The repository of MulSKIPS is in GitLab_. For each developer, it is safe to clone its own repository.
+The repository of MulSKIPS is in GitHub_. For each developer, it is safe to clone its own repository.
 
 .. _GitLab: https://github.com/giuseppefisicaro/mulskips
 
@@ -15,7 +15,7 @@ Then you do your modifications, commits and so on.
 Before the merge request, you have to update your **newbranch** branch from the **devel** branch 
 (which will be updated from the main one) with ``git rebase devel`` and solve the conflicts if necessary.
 
-Then go to GitLab_ and do a merge-request. Finally do not change your **newbranch** branch because the merge request will be
+Then go to GitHub_ and do a merge-request. Finally do not change your **newbranch** branch because the merge request will be
 affected. In function of the remarks of the reviewer, you change you **newbranch** branch, do a ``git pull origin newbranch`` to propagate the commits. 
 
 Development of a new functionality
