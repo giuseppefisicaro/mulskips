@@ -5,9 +5,9 @@ The MulSKIPS code
 the growth kinetics of elements, alloys and compounds characterized by the sp3 bond symmetry.
 Formalization and implementation details of the code are discussed in Ref. [1_].
 The code is open source and it is distributed according to the GNU public license.
-MulSKIPS is available on GitLab_, from where it can be downloaded as a tar file.
+MulSKIPS is available on GitHub_, from where it can be downloaded as a tar file.
 
-.. _GitLab: https://github.com/giuseppefisicaro/mulskips
+.. _GitHub: https://github.com/giuseppefisicaro/mulskips
 
 Deposition and evaporation of the substrate atoms are the active Monte Carlo events,
 driving the stochastic evolution. In MulSKIPS, a dense super-lattice correctly
