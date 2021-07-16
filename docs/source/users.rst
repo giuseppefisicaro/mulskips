@@ -1,9 +1,9 @@
 Get the code
 ============
 
-MulSKIPS is available on GitLab_, from where it can be cloned or downloaded as a tar file.
+MulSKIPS is available on GitHub_, from where it can be cloned or downloaded as a tar file.
 
-.. _GitLab: https://github.com/giuseppefisicaro/mulskips
+.. _GitHub: https://github.com/giuseppefisicaro/mulskips
 
 
 Install and run the code
