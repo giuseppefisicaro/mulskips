@@ -3,7 +3,7 @@ How to use git
 
 The repository of MulSKIPS is in GitHub_. For each developer, it is safe to clone its own repository.
 
-.. GitHub_: https://github.com/giuseppefisicaro/mulskips
+.. _GitHub: https://github.com/giuseppefisicaro/mulskips
 
 Each developer has its own devel branch which has to be a copy of the mulskips branch (called **main**). 
 Only the command ``git pull main`` will be used to update your **devel** branch.
